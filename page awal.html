@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <title>HALLO SAYANG</title>
+    <style>
+        body{
+            color: azure;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .container {
+            text-align: center;
+            top: center;
+            position: relative;
+            z-index: 1;
+            
+        }
+        .greetings{
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        .greetings > span{
+            animation: glow 2.5s ease-in-out infinite;
+        }
+        @keyframes glow{
+            0%, 100%{
+                color: #fff;
+                text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+            }
+            10%, 90%{
+                color: #111;
+                text-shadow: none;
+            }
+        }
+        .greetings > span:nth-child(2){
+            animation-delay: .1s ;
+        }
+        .greetings > span:nth-child(3){
+            animation-delay: .1.5s ;
+        }
+        .greetings > span:nth-child(4){
+            animation-delay: .2s;
+        }
+        .greetings > span:nth-child(5){
+            animation-delay: .3s;
+        }
+        .greetings > span:nth-child(6){
+            animation-delay: .4s ;
+        }
+        .greetings > span:nth-child(7){
+            animation-delay: .5s ;
+        }
+        .greetings > span:nth-child(8){
+            animation-delay: .6s;
+        }
+        .greetings > span:nth-child(9){
+            animation-delay: .7s;
+        }
+        .greetings > span:nth-child(10){
+            animation-delay: .8s;
+        }
+        .greetings > span:nth-child(11){
+            animation-delay: .9s;
+        }
+
+        
+        .button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #fb2bd5;
+            transition: all 0.2s ease;
+        }
+
+        .a {
+            color: #000;
+        }
+        
+        .button:active {
+            transform: scale(0.96);
+        }
+        
+        .button:before,
+        .button:after {
+            position: absolute;
+            content: "";
+            width: 150%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+        }
+        
+        .button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, #f1a6e4 20%, transparent 20%),
+            radial-gradient(circle, transparent 20%, #f297e1 20%, transparent 30%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #fb2bd5 15%, transparent 20%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%),
+            radial-gradient(circle, #fb2bd5 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+            10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopHeart 1.5s ease;
+        }
+        
+        @keyframes greentopHeart {
+            0% {
+            background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                40% 90%, 55% 90%, 70% 90%;
+            }
+        
+            50% {
+            background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                50% 50%, 65% 20%, 90% 30%;
+            }
+        
+            100% {
+            background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                50% 40%, 65% 10%, 90% 20%;
+            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+        
+        .button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomHeart 1.5s ease;
+        }
+        
+        @keyframes greenbottomHeart {
+            0% {
+            background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                70% -10%, 70% 0%;
+            }
+        
+            50% {
+            background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                105% 0%;
+            }
+        
+            100% {
+            background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                110% 10%;
+            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="greetings">
+        <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
+            <span>H</span>
+            <span>A</span>
+            <span>L</span>
+            <span>L</span>
+            <span>O</span>
+            <span>S</span>
+            <span>A</span>
+            <span>Y</span>
+            <span>A</span>
+            <span>N</span>
+            <span>G</span>
+        </div>
+        <button class="button">
+            <a class="a" href= pagekedua.html style="text-decoration: none;" , 
+            style="color:#0e0e0e;">Klik di sini yaa..</a>
+        </button>
+      </div>
+    
+</body>
+</html>

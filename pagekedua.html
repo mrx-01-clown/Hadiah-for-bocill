@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head >
+  <title>Typing Effect Message</title>
+  <link rel="stylesheet" href="cssmain/style2.css">
+</head>
+<body>
+  <div class="container">
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+        <div class="message">
+          <p id="message"></p>
+        </div>
+  <script>
+    const message = document.getElementById("message");
+const text = "Kamu tahu nggak? aku bangga banget punya perempuan seperti kamu. Perempuan yang kuat, baik hati, dan sopan. Aku akan selalu menemanimu bagaimanapun kondisinya. Semoga hal-hal baik selalu datang kepadamu. I LOVE YOU Fikih An'nur Desinta ❤️";
+
+let i = 0;
+setInterval(() => {
+  if (i < text.length) {
+    message.textContent += text[i];
+    i++;
+  }
+}, 150);
+  </script>
+</body>
+</html>
